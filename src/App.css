@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dev {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	width: 100vw;
+	height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+	width: 100vw;
+	height: 5rem;
+
+	position: absolute;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: #121212;
+	color: #dedede;
+
+	text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.homeButton {
+	margin: 1rem 1rem 1rem 2rem;
+	font-family: 'Sharpie', sans-serif;
+	font-size: 2.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menubar {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+
+	font-family: 'Quicksand', sans-serif;
+
+	width: 30vw;
+
+}
+
+.menu-item {
+	transition: 200ms ease;
+	background: linear-gradient(90deg, #9e3af6, #ff076e);
+	-webkit-background-clip: text;
+}
+
+.menu-item:hover {
+	color: transparent;
+}
+
+.home-dev {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #121212;
+	color: #dedede;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	width: 80vw;
+}
+
+.hero-name {
+	color: #e00d49;
+	font-size: 4rem;
+	font-family: 'Sharpie', sans-serif;
+	transition: 200ms ease;
+	background: linear-gradient(90deg, #f63a88, #ff0724);
+	-webkit-background-clip: text;
+}
+
+.hero-name:hover {
+	color: transparent;
+}
+
+.hero-tags {
+	font-size: 1rem;
+	font-family: 'Satoshi', sans-serif;
+	color: #505050;
+}
+
+.hero-img {
+	width: 25vw;
+	aspect-ratio: 1/1;
+	border-radius: 30px 0px 30px 0px;
+	z-index: 10;
+}
+
+.hero-img::before {
+	content: '';
+	display: inline-block;
+	width: inherit;
+	aspect-ratio: 1/1;
+	position: absolute;
+	z-index: -1;
+	transform: translate(10px, 10px);
+	border-radius: 30px 0px 30px 0px;
+	background-color: #e00d49;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+		height: 3rem;
+	}
+
+	.menubar {
+		width: 50vw;
+	}
+
+	.menu-item {
+		font-size: 0.6rem;
+	}
+
+	.homeButton {
+		font-size: 1.5rem;
+	}
+
+	.hero {
+		height: 100vh;
+		flex-direction: column;
+	}
+
+	.hero-name {
+		font-size: 2.5rem;
+	}
+
+	.hero-tags {
+		font-size: 0.8rem;
+	}
+
+	.hero-img {
+		width: 80vw;
+	}
 }
