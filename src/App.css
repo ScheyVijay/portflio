@@ -29,7 +29,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: #121212;
+	/* background-color: #121212; */
 	color: #dedede;
 
 	text-decoration: none;
@@ -71,7 +71,7 @@ a {
 	justify-content: center;
 	align-items: center;
 
-	background-color: #121212;
+	/* background-color: #121212; */
 	color: #dedede;
 }
 

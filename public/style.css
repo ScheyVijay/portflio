@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+}
+
+:root {
+    --bg : #121212;
+    --fg: #9B37FF;
+    --ag: #7ff9f5;
+    --white: #dedede;
+    --rose: #ec4899;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 200% center;
+    }
+}
+
+body,
+main {
+    animation: background-pan 10s linear infinite ;
+    background: linear-gradient(
+        to right,
+        var(--ag),
+        var(--fg),
+        var(--ag)
+    );
+    background-size: 200%;
+    color: var(--fg);
+
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#stagger {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    position: relative;
+}
+
+.tile:before {
+    content: "";
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    inset: 1px
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+
+    color: var(--white);
+    font-size: 5rem;
+    font-family: "Poppins", sans-serif;
+
+    width: 710px;
+    line-height: 1.5em;
+}
+
+.chess {
+    font-family: 'Dancing Script', cursive;
+    color: var(--rose);
+    font-size: 6rem;
+    font-style: bold;
+}
+
+.toggled {
+    color: var(--bg) !important;
+}
